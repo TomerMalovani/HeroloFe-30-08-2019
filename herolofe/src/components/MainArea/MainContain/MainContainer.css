@@ -1,0 +1,59 @@
+.MainContainer{
+    height: auto;
+    background-color: rgb(235, 235, 235);
+    min-height: 80vh;
+    display: flex;
+    align-content: space-between;
+}
+
+.WeatherPic{
+    border:1px solid red;
+    height: 10vh;
+    width: 10vw;
+}
+
+div.col-2{
+    margin:0;
+}
+
+.BtnContain{
+    justify-content: flex-end;
+    
+}
+
+.FavBtn{
+    margin-top: 10px;
+    font-size: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    
+}
+
+.spacer{
+    margin: 20px 0 20px 0;
+}
+
+.dayCardContainer .row{
+    display: flex;
+    justify-content: center;
+}
+
+
+div.dayCard{
+    height: 20vh;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.col-md-4{
+    margin-bottom: 10px;
+}
+
+
+
+div.col-4{
+    padding: 0 !important;
+    margin: 0 !important;
+}
