@@ -11,4 +11,13 @@ body{
 
 .searchBarCol{
         margin: 10px 0 10px 0 !important;
+        display: flex;
+        justify-content: center;
+}
+
+.favoritesHeader{
+        color: black;
+        text-align: center;
+        font-size: 10px;
+        
 }
