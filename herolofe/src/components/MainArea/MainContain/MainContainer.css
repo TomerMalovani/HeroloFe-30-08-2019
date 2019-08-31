@@ -4,12 +4,25 @@
     min-height: 80vh;
     display: flex;
     align-content: space-between;
+box-shadow: 0px 16px 9px -8px rgba(0,0,0,0.75);
 }
 
 .WeatherPic{
-    border:1px solid red;
-    height: 10vh;
-    width: 10vw;
+    height: 50px;
+    margin-top: 2vh;
+    width: 50px;
+    background-image: url('../weatherpic.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.locationName{
+    padding: 0 !important;
+    margin-left: 5vw;
+    width: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 div.col-2{
@@ -18,7 +31,7 @@ div.col-2{
 
 .BtnContain{
     justify-content: flex-end;
-    
+    display: flex;
 }
 
 .FavBtn{
@@ -26,24 +39,36 @@ div.col-2{
     font-size: 10px;
     background-color: #fff;
     border-radius: 5px;
-    
+        margin-right: 10px;
+
 }
 
 .spacer{
     margin: 20px 0 20px 0;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    align-items: center;
+    text-align: center;
 }
 
 .dayCardContainer .row{
+    text-align: center;
     display: flex;
     justify-content: center;
 }
 
 
 div.dayCard{
+    box-shadow: 0px 4px 16px -1px rgba(0,0,0,0.75);
     height: 20vh;
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
+    border-radius: 5px;
+   background-color: rgb(0, 111, 131);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content:space-evenly;
     
 }
 

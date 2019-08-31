@@ -5,7 +5,7 @@ import './HeaderNav.css'
 class HeaderNav extends React.Component {
     render() {
         return (
-            <div className="menuContainer">
+            <Col className="menuContainer">
 
                 <li className="MenuItem">
                     <button className="menuBtn">Home</button>
@@ -14,7 +14,7 @@ class HeaderNav extends React.Component {
                     <button className="menuBtn">Favorites</button>
                 </li>
 
-            </div>
+            </Col>
         );
     }
 }

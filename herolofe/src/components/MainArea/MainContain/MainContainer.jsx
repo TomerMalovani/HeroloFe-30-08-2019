@@ -3,33 +3,39 @@ import { Container, Row, Col } from 'reactstrap';
 import './MainContainer.css'
 
 class MainConTain extends React.Component {
+    constructor(props) {
+        super(props)
+
+    }
     render() {
         return (
             <Container>
                 <div className="MainContainer">
 
                     <Col xs={12}>
-                        <Row>
-                            <Col xs="2">
+                        <Row className="maincontain">
+
+                            <Col xs="8">
                                 <div className="WeatherPic"></div>
+                                <Col xs="4" className="locationName" >{this.props.locationName}</Col>
                             </Col>
-                            <Col >israel TLV</Col>
+
                             <Col className="BtnContain" xs={{ size: '4', offset: 1 }}>
                                 <button className="FavBtn">add to Favorites</button>
                             </Col>
                         </Row>
-                        <div className="spacer">weather is fine</div>
+                        <div className="spacer">{this.props.condition} </div>
 
                         <div className="dayCardContainer">
 
                             <Row>
 
-                                <Col md={4} xs={12} lg={2}><div className="dayCard">Sunday</div></Col>
-                                <Col md={4} xs={12} lg={2}><div className="dayCard">Monday</div></Col>
-                                <Col md={4} xs={12} lg={2}><div className="dayCard">Tuesday</div></Col>
+                                <Col md={4} xs={12} lg={2}><div className="dayCard"><div>Sunday</div>{this.props.weekWeather && <div>{this.props.weekWeather[0]["Temperature"]["Minimum"]["Value"]} °F</div>}{this.props.weekWeather && <div>{this.props.weekWeather[0]["Day"]["IconPhrase"]}</div>}  </div></Col>
+                                <Col md={4} xs={12} lg={2}><div className="dayCard"><div>Monday</div>{this.props.weekWeather && <div>{this.props.weekWeather[1]["Temperature"]["Minimum"]["Value"]} °F</div>}{this.props.weekWeather && <div>{this.props.weekWeather[1]["Day"]["IconPhrase"]}</div>} </div></Col>
+                                <Col md={4} xs={12} lg={2}><div className="dayCard"><div>Tuesday</div>{this.props.weekWeather && <div>{this.props.weekWeather[2]["Temperature"]["Minimum"]["Value"]} °F</div>}{this.props.weekWeather && <div>{this.props.weekWeather[2]["Day"]["IconPhrase"]}</div>} </div></Col>
 
-                                <Col md={4} xs={12} lg={2}><div className="dayCard">Wednesday </div></Col>
-                                <Col md={4} xs={12} lg={2}><div className="dayCard">Thursday </div></Col>
+                                <Col md={4} xs={12} lg={2}><div className="dayCard"><div>Wednesday</div>{this.props.weekWeather && <div>{this.props.weekWeather[3]["Temperature"]["Minimum"]["Value"]} °F</div>}{this.props.weekWeather && <div>{this.props.weekWeather[3]["Day"]["IconPhrase"]}</div>}  </div></Col>
+                                <Col md={4} xs={12} lg={2}><div className="dayCard"><div>Thursday</div>{this.props.weekWeather && <div>{this.props.weekWeather[4]["Temperature"]["Minimum"]["Value"]} °F</div>}{this.props.weekWeather && <div>{this.props.weekWeather[4]["Day"]["IconPhrase"]}</div>}  </div></Col>
 
 
 

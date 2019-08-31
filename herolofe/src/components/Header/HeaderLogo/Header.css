@@ -1,4 +1,5 @@
 .HeroloLogo{
     color: white;
-    font-size: 15px;
+    display: flex;
+    align-items: center;
 }

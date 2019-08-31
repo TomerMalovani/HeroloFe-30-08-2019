@@ -1,6 +1,7 @@
 .menuContainer{
     display: flex;
     justify-content:flex-end;
+    align-items: center;
 }
 
 .Menu{
@@ -12,7 +13,6 @@
 .MenuItem{
         list-style: none;
         margin-top: 2px;
-        border:1px solid white;
 }
 
 .menuBtn:hover{

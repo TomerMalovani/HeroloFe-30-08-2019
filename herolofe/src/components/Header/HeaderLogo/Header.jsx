@@ -5,7 +5,7 @@ import './Header.css'
 class HeaderLogo extends React.Component {
     render() {
         return (
-            <Col><h2 className="HeroloLogo">Herolo Weather</h2></Col>
+            <Col className="HeroloLogo">Herolo Weather</Col>
         );
     }
 }
