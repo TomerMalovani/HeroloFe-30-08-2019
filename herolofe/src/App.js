@@ -14,7 +14,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      locationName: undefined,
+      locationName: "Tel Aviv, IL",
       searchInput: "",
       currentCityKey: "215854",
       weekWeather: [],
@@ -26,7 +26,9 @@ export default class App extends React.Component {
   }
 
 
-
+  componentDidMount() {
+    this.getWeather();
+  }
 
 
   getKey(searchWord) {
@@ -43,15 +45,14 @@ export default class App extends React.Component {
             currentCityKey:
               data[0].Key, locationName: data[0].EnglishName + ", " + data[0].Country.ID
           })
-          this.getWeather();
         }
-        else {
-          this.setState({ currentCityKey: "" })
-        }
+        this.getWeather();
+
       }).catch()
   }
 
   getWeather() {
+    console.log(this.state.currentCityKey)
     const url =
       "http://dataservice.accuweather.com/forecasts/v1/daily/5day/" + this.state.currentCityKey + "?apikey=" + apiKey;
     fetch(url).then(Response => Response.json())

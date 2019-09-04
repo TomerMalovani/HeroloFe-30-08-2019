@@ -12,9 +12,15 @@ class Favorites extends React.Component {
             <Container className="favContianer">
                 <Row>
                     <div className="favContianer">
-                        {JSON.parse(localStorage.getItem('favorites')).map((item, index) => (
-                            <Col xs={12} md={4} lg={2} className="favCard" key={index}>
-                                <p><Row>{item.name}</Row> {item.Temperature}°F</p></Col>))}
+                        {localStorage.getItem('favorites') == null &&
+                            <p className="">no favorites</p>
+                        }
+                        {localStorage.getItem('favorites') &&
+                            JSON.parse(localStorage.getItem('favorites')).map((item, index) => (
+                                <Col xs={12} md={4} lg={2} className="favCard" key={index}>
+                                    <p><Row>{item.name}</Row> {item.Temperature}°F</p></Col>))
+                        }
+
 
                     </div>
                 </Row>
