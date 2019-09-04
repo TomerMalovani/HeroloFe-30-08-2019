@@ -36,7 +36,7 @@ div.col-2{
 }
 
 .FavBtn{
-    height: 25px;
+    height: auto;
     margin-top: 10px;
     font-size: 10px;
     background-color: #fff;

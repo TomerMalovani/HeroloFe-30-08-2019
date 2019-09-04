@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import './MainContainer.css'
-import { timeout } from 'q';
 
 class MainConTain extends React.Component {
     constructor(props) {
@@ -50,8 +49,10 @@ class MainConTain extends React.Component {
                             <button onClick={this.addToFav} className="FavBtn">add to Favorites</button>
                         </Col>
                     </Row>
-                    <div className="spacer">{this.props.condition}{this.state.errorMsg && this.state.errorMsg} </div>
 
+                    <Col>
+                        <div className="spacer">{this.props.condition}{this.state.errorMsg && this.state.errorMsg} </div>
+                    </Col >
                     <div className="dayCardContainer">
 
                         <Row>

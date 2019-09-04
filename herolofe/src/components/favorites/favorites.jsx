@@ -6,10 +6,6 @@ class Favorites extends React.Component {
     constructor(props) {
         super(props)
 
-        this.removeFav = this.removeFav.bind(this);
-    }
-    removeFav(e) {
-        console.log(e.target.value)
     }
     render() {
         return (
